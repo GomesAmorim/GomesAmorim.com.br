@@ -50,7 +50,7 @@ header {
 }
 
 
-/*Ajustes da navbar mobile*/
+/*Ajustes da navbar mobile apenas o icon*/
 #menu-icon{
     font-size: 3.5rem;
     color: var(--main-color);
@@ -165,5 +165,17 @@ header {
 
     #menu-icon{
         display:block;
+    }
+}
+
+
+@media (max-width: 720px) {
+    .logo{
+        width: 180px;
+    }
+
+    #menu-icon{
+        font-size: 3rem;
+        display: block;
     }
 }
