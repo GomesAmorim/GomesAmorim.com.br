@@ -132,7 +132,7 @@ header {
     /*Ajuste da NavBar mobile*/
     .navbar{
         position: fixed;
-        top: 100%;
+        top: 0;
         right: 0;
         width: 50%;
         height: 100vh;
@@ -167,21 +167,10 @@ header {
         width: 0%;
     }
 
-    .gradient-btn{
-        display: none;
-    }
 
     #menu-icon{
         display: block;
         margin-left: auto;
-    }
-
-    .navbar a:hover::after {
-        width: 0%;
-    }
-
-    .navbar.active{
-        display: block;
     }
 
     /*gradient-btn none*/
@@ -189,9 +178,6 @@ header {
         display: none;
     }
 
-    #menu-icon{
-        display:block;
-    }
 }
 
 
