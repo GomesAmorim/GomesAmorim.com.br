@@ -24,7 +24,7 @@ body {
     color: var(--text-color);
 }
 
-/*ajuste de alinhamento e tamanho de elementos da navbar*/
+/*ajuste da navbar*/
 header {
     position: fixed;
     width: 100%;
@@ -47,6 +47,14 @@ header {
 .navbar{
     display: flex;
     margin: 0 auto;
+}
+
+
+/*Ajustes da navbar mobile*/
+#menu-icon{
+    font-size: 3.5rem;
+    color: var(--main-color);
+    display: none;
 }
 
 /*Ajustes e animações da logo*/
@@ -119,17 +127,43 @@ header {
 
 /*Mobile*/
 
-@media (max-width: 960px) {
+@media (max-width: 950px) {
 
-    /*Logo*/
-    .logo{
-    width: 180px;
-    color: var(--text-color);
-    font-weight: 800;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
+    /*Ajuste da NavBar mobile*/
+    .navbar{
+        display:block;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 50%;
+        padding: 1rem 3 rem;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: none;
     }
-    .logo:hover{
-        transform: scale(1.1);
+
+    .navbar a{
+        position:static;
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+        margin-left: 2rem;
+        color: var(--text-color);
+    }
+
+    .navbar a:hover::after {
+        width: 0%;
+    }
+
+    .navbar.active{
+        display: block;
+    }
+
+    /*gradient-btn none*/
+    .gradient-btn{
+        display: none;
+    }
+
+    #menu-icon{
+        display:block;
     }
 }
