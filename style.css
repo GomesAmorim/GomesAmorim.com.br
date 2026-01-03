@@ -131,23 +131,49 @@ header {
 
     /*Ajuste da NavBar mobile*/
     .navbar{
-        display:block;
-        position: absolute;
+        position: fixed;
         top: 100%;
         right: 0;
         width: 50%;
-        padding: 1rem 3 rem;
-        background-color: rgba(0, 0, 0, 0.8);
-        display: none;
+        height: 100vh;
+
+        background-color: rgba(0, 0, 0, 0.85);
+
+        display: flex;
+        flex-direction: column;
+
+        /* 🔥 estado fechado */
+        transform: translateX(100%);
+        opacity: 0;
+
+        transition: transform 0.35s ease, opacity 0.3s ease;
+        z-index: 999;
+    }
+
+    .navbar.active{
+        transform: translateX(0);
+        opacity: 1;
     }
 
     .navbar a{
-        position:static;
+        position: static;
         display: block;
         font-size: 2rem;
-        margin: 3rem 0;
-        margin-left: 2rem;
+        margin: 3rem 0 0 2rem;
         color: var(--text-color);
+    }
+
+    .navbar a:hover::after {
+        width: 0%;
+    }
+
+    .gradient-btn{
+        display: none;
+    }
+
+    #menu-icon{
+        display: block;
+        margin-left: auto;
     }
 
     .navbar a:hover::after {
