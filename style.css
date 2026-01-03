@@ -116,19 +116,61 @@ header {
     color: var(--text-color);
     border: none;
     text-wrap: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .gradient-btn:hover{
     transform: scale(1.15);
 }
 
+#btn-zap{
+    font-size: 2.5rem;
+    margin-right: 0.5rem;
+}
 
 
+/*Home seja bem vindo*/
+section {
+    min-height: 100vh;
+    padding: 10rem 15%;
+}
+
+.home{
+
+    background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
+                url(img/background.png);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 15rem;
+    padding-left: 9rem;
+}
+
+.home-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+}
+
+/*bem vindo*/
+.balanca-icon img{
+    width: 500px;
+    transition: width 0.5s ease;
+}
 
 /*Mobile*/
 
 @media (max-width: 950px) {
 
+
+    /*bem vindo*/
+    .balanca-icon img{
+        width: 350px;
+    }
     /*Ajuste da NavBar mobile*/
     .navbar{
         position: fixed;
@@ -182,6 +224,12 @@ header {
 
 
 @media (max-width: 720px) {
+
+    .home{
+        justify-content:center;
+        padding: 0;
+    }
+
     .logo{
         width: 180px;
     }
@@ -189,5 +237,9 @@ header {
     #menu-icon{
         font-size: 3rem;
         display: block;
+    }
+
+    .balanca-icon img{
+        width: 300px;
     }
 }
