@@ -31,7 +31,7 @@ header {
     top: 0;
     left: 0;
     padding: 2rem 7.5%;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.85);
     backdrop-filter: blur(10px);
 
 
@@ -139,14 +139,14 @@ section {
 
 .home{
 
-    background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
                 url(img/background.png);
     background-size: cover;
     display: flex;
     align-items: center;
     justify-content: left;
     gap: 15rem;
-    padding-left: 9rem;
+    padding-left: 12rem;
 }
 
 .home-content{
@@ -156,21 +156,16 @@ section {
     text-align: right;
 }
 
-/*bem vindo*/
+/*bem vindo imagem de bem vindo*/
 .balanca-icon img{
-    width: 500px;
+    width: 475px;
     transition: width 0.5s ease;
 }
 
 /*Mobile*/
 
-@media (max-width: 950px) {
+@media (max-width: 1100px) {
 
-
-    /*bem vindo*/
-    .balanca-icon img{
-        width: 350px;
-    }
     /*Ajuste da NavBar mobile*/
     .navbar{
         position: fixed;
@@ -179,7 +174,7 @@ section {
         width: 50%;
         height: 100vh;
 
-        background-color: rgba(0, 0, 0, 0.85);
+        background-color: rgba(0, 0, 0, 0.3);
 
         display: flex;
         flex-direction: column;
@@ -220,26 +215,42 @@ section {
         display: none;
     }
 
+    /*centralizando o bem vindo do home*/
+    .home{
+        justify-content:center;
+        padding: 0;
+        background-size: cover;
+    }
+    
+    /*bem vindo*/
+    .balanca-icon img{
+        width: 400px;
+    }
+
 }
 
 
 @media (max-width: 720px) {
 
-    .home{
-        justify-content:center;
-        padding: 0;
-    }
-
+    /*ajuste do tamanho da logo na navbar*/
     .logo{
         width: 180px;
     }
 
+    /*ajuste do icone de menu*/
     #menu-icon{
         font-size: 3rem;
         display: block;
     }
 
+    /*centralizando o bem vindo do home*/
+    .home{
+        justify-content:center;
+        padding: 0;
+        background-size: cover;
+    }
+
     .balanca-icon img{
-        width: 300px;
+        width: 325px;
     }
 }
