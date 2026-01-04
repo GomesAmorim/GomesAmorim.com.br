@@ -141,12 +141,13 @@ section {
 
     background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
                 url(img/background.png);
-    background-size: cover;
+    background-size: 100%;
     display: flex;
     align-items: center;
     justify-content: left;
     gap: 15rem;
     padding-left: 12rem;
+    transition: background-size 1s ease-in-out;
 }
 
 .home-content{
@@ -159,12 +160,12 @@ section {
 /*bem vindo imagem de bem vindo*/
 .balanca-icon img{
     width: 475px;
-    transition: width 0.5s ease;
+    transition: width 0.5s ease-in-out;
 }
 
 /*Mobile*/
 
-@media (max-width: 1100px) {
+@media (max-width: 1300px) {
 
     /*Ajuste da NavBar mobile*/
     .navbar{
@@ -174,7 +175,7 @@ section {
         width: 50%;
         height: 100vh;
 
-        background-color: rgba(0, 0, 0, 0.3);
+        background-color: rgba(0, 0, 0, 0.8);
 
         display: flex;
         flex-direction: column;
@@ -217,20 +218,22 @@ section {
 
     /*centralizando o bem vindo do home*/
     .home{
+        background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+                    url(img/background.png);
         justify-content:center;
         padding: 0;
-        background-size: cover;
+        background-size: 250%;
     }
-    
+
     /*bem vindo*/
     .balanca-icon img{
-        width: 400px;
+        width: 450px;
     }
 
 }
 
 
-@media (max-width: 720px) {
+@media (max-width: 400px) {
 
     /*ajuste do tamanho da logo na navbar*/
     .logo{
@@ -247,7 +250,6 @@ section {
     .home{
         justify-content:center;
         padding: 0;
-        background-size: cover;
     }
 
     .balanca-icon img{
